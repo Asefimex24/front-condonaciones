@@ -68,7 +68,7 @@ try {
 
   if (resultado.success) {
         Swal.fire({
-            // position: "top-end",
+            position: "top-end",
             icon: "success",
             title: "Solicitud Registrada",
             showConfirmButton: false,
