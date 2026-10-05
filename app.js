@@ -68,13 +68,16 @@ try {
 
   if (resultado.success) {
         Swal.fire({
-            title: "Solicitud Registrada",
+            // position: "top-end",
             icon: "success",
-            draggable: true
+            title: "Solicitud Registrada",
+            showConfirmButton: false,
+            timer: 1500
         });
 
     // alert(`Solicitud enviada correctamente para el cliente ${resultado.cliente}. Fila guardada: ${resultado.fila}`);
     document.getElementById('frmCondonacion').reset();
+    establecerFechaActual();
   } else {
     // Muestra el mensaje de error si ocurrió una excepción en Apps Script
     alert('Error en el servidor: ' + (resultado.error || 'Ocurrió un problema desconocido'));
