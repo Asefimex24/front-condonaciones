@@ -67,7 +67,13 @@ try {
   const resultado = await response.json();
 
   if (resultado.success) {
-    alert(`Solicitud enviada correctamente para el cliente ${resultado.cliente}. Fila guardada: ${resultado.fila}`);
+        Swal.fire({
+            title: "Solicitud Registrada",
+            icon: "success",
+            draggable: true
+        });
+
+    // alert(`Solicitud enviada correctamente para el cliente ${resultado.cliente}. Fila guardada: ${resultado.fila}`);
     document.getElementById('frmCondonacion').reset();
   } else {
     // Muestra el mensaje de error si ocurrió una excepción en Apps Script
